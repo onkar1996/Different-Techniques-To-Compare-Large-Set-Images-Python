@@ -1,0 +1,11 @@
+CREATE TABLE `cid` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `image_url` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `hash` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`),
+  KEY `hash` (`hash`(191))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+INSERT INTO `cid` (`id`, `disease_id`, `image_url`, `hash`) VALUES
+(1,'https://www.google.com/sample/yourimageurl/1574759092207.gif',	''),
+(2,'https://www.google.com/sample/yourimageurl/1574759092207.jpg',	'')
